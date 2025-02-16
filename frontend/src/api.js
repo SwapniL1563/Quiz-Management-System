@@ -1,16 +1,14 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:3000";
+const API_URL = "https://quizo-backend.onrender.com";
 
 // Login user
-export const loginUser = async (username, password) => {
-    try {
-      const response = await axios.post(`${API_URL}/login`, { username, password });
-      return response.data;
-    } catch (error) {
-      throw new Error(error.response?.data?.message || "Login failed");
-    }
-  };
+export const loginUser = async (username, password) =>
+  fetch(`${API_URL}/login`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ username, password }),
+  }).then(res => res.json());
 
 // Fetch All Quizzes
 export const fetchQuizzes = async () => {
