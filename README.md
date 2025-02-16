@@ -48,7 +48,7 @@ npm run dev
 
 Frontend runs at: **http://localhost:5173**
 
-### **API Documentation**
+## **API Documentation**
 ### **1) User Login**
      POST /login
      
@@ -141,7 +141,7 @@ DELETE /quizzes/:id
 
 Deletes the quiz and returns a success message.
 
-### **Technologies Used**
+## **Technologies Used**
 Frontend: React, TailwindCSS, Axios , Shadcn <br>
 Backend: Express, TypeScript, Prisma <br>
 Database: PostgreSQL <br>
