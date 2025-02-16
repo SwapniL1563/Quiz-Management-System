@@ -27,7 +27,7 @@ const Dashboard = () => {
   return (
     <div className="container mx-auto p-3 md:p-6 bg-gray-100">
       {/* Navbar */}
-      <div className="flex justify-between px-4  items-center border-b-2 py-3">
+      <div className="flex justify-between   items-center border-b-2 py-4 mb-2 md:mb-3 md:py-2">
      
       {/* Logo */}
      <div className="flex justify-center gap-1">
@@ -37,6 +37,16 @@ const Dashboard = () => {
       
       <h1 className="hidden md:block text-xl font-semibold ">Dashboard</h1>
       <Button className="text-sm md:text-base bg-[#30B2AD]" onClick={() => navigate("/quiz")}>Create Quiz</Button>
+      </div>
+
+      <div className="bg-[#30B2AD] text-white p-5 md:p-6 rounded-lg mb-6  md:m-0 shadow-lg">
+        <h1 className="text-base md:text-xl font-semibold">Welcome to Quizo</h1>
+        <p className="mt-2 text-xs md:text-base text-[#e6e6e6] ">
+          Create and manage your quizzes easily. Click the button below to add a new quiz!
+        </p>
+        <Button className="mt-3 text-sm md:text-base bg-[#30B2AD] border hover:border-transparent hover:bg-[#2B9894] font-semibold" onClick={() => navigate("/quiz")}>
+          Create New Quiz
+        </Button>
       </div>
 
       {/* Quizzes Edit , Delete */}
