@@ -8,7 +8,14 @@ dotenv.config();
 const app: Application = express();
 const prisma = new PrismaClient();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://quiz-management-system-frontend.vercel.app", // Update with your frontend URL
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type"],
+  })
+);
+
 app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 3000;
