@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://quizo-backend.onrender.com";
+const API_URL = "https://quiz-management-system-backend.onrender.com";
 
 // Login user
 export const loginUser = async (username, password) =>
